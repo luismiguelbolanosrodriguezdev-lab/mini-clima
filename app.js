@@ -14,7 +14,7 @@ async function consultarClima() {
 
     if (!respuesta.ok) {
       throw new Error(
-        "Error en la solicitud de coordenadas" + respuesta.status,
+        "Error en la solicitud de coordenadas: " + respuesta.status,
       );
     }
 
@@ -36,7 +36,7 @@ async function consultarClima() {
 
     if (!resultadosClima.ok) {
       throw new Error(
-        "Error en la solicitud de datos climáticos" + resultadosClima.status,
+        "Error en la solicitud de datos climáticos: " + resultadosClima.status,
       );
     }
 
@@ -51,6 +51,7 @@ async function consultarClima() {
     document.getElementById("viento").textContent =
       "La velocidad del viento es de " + viento + " km/h";
   } catch (error) {
+    console.error(error);
     document.getElementById("mensaje").textContent =
       "Error al obtener los datos de la ciudad, intentalo de nuevo";
   }

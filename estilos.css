@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultados:has(#mensaje:empty):has(#nombre-ciudad:empty) {
+    display: none;
+}
+
+#resultados{
+    border: solid 4px black;
+    border-radius: 10px;
+    background-color: #52ddc6;
+    padding: 2%;
+    margin-top: 10%; 
+}
+
+#ciudad{
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 4px;
+  transition: all 0.5s;
+}
+
+#ciudad:hover{
+    background-color: #1be676;
+    width: 190px;
+    height: 20px;
+    transform: scale(1.1);
+}
+
+#boton-consultar{
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: #52ddc6;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#boton-consultar:hover {
+    background-color: #1be676;
+    width: 80px;
+    height: 30px;
+    transform: scale(1.1);
+}
+
+#mensaje{
+    color: red;  
+}
